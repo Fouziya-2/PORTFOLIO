@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and Base Styles */
+body, html {
+    background-color: rgb(2, 2, 2);
+    font-family: "Montserrat", sans-serif;
+    margin: 5;
+    padding: 8;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 120px;
+    background: #292828;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(244, 236, 236);
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Main Content */
+.content {
+    margin-left: 120px; /* Same width as the sidebar */
+}
+
+/* Header */
+header {
+    padding: 32px;
+    text-align: center;
+    color: rgb(232, 223, 223);
+}
+
+.avatar {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* About Section */
+.about-section {
+    padding: 64px;
+    color:#f1f1f1
+}
+
+.skills {
+    margin-bottom: 48px;
+}
+
+.skill {
+    margin-bottom: 16px;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    background-color: #ccc;
+    height: 10px;
+    position: relative;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #333;
+}
+
+
+/* Photo Grid */
+.photo-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.grid-column {
+    flex: 50%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.photo-grid img {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 90px 50px;
+    color:#f1f1f1;
+    margin-left: 90px;
+    
+    
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.btn-send {
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-send:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 64px;
+}
+
+footer i {
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+footer i:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+
+
+    </style>
+</head>
+<body>
+    <h1 style="color:#f1f1f1;"> Ita a Sample Portfolio Page</h1>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <img src="https://signature.freefire-name.com/img.php?f=11&t=Fouziya" alt="image" style="width:100%">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+    </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+        <!-- <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a> -->
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="content" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Fouziya.</h1>
+        <p>Web Designer.</p>
+        <img src="https://signature.freefire-name.com/img.php?f=11&t=Fouziya" alt="girl" class="avatar">
+    </header>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey">Fouziya</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>i'm a recent graduated student in computer science and engineering with a passion for web design and development, proficient in  front-end development (HTML, CSS, JavaScript, Bootstrap, React), and backend integration with Python. They have gained practical experience through projects and internships, demonstrating a strong work ethic, eagerness to learn, and a commitment to creating intuitive and visually appealing websites. i'm blend of technical skills, creativity, and dedication positions them as a promising talent in the field of web design and development.
+
+            </p>
+            <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+            <div class="skills">
+                <div class="skill">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 79%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Web Design</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">SQL</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+        
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">6+</span><br>
+                    Projects Done
+                </div>
+               
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">2+</span><br>
+                    Attending Career  Development Programs
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">2</span><br>
+                    Internships
+                </div
+            </div>
+
+            <button class="btn-download">
+                <i class="fa fa-download"><a href="file:///C:/Users/fouzi/Downloads/resume_updated.pdf"></a></i> Download Resume
+            </button>
+            </div>
+            
+    </div>
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="w3-content w3-padding-64 w3-text-grey" id="contact">
+            <h2 class="w3-text-light-grey">Contact Me</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <div class="w3-section">
+                <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>hyderabad</p>
+                <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +919999999999</p>
+                <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: example@mail.com</p>
+            </div><br>
+            <p>Let's get in touch. Send me a message:</p>
+
+            <form action="/action_page.php" target="_blank">
+                <input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name">
+                <input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject">
+                <input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message">
+                <button class="btn-send">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact Section -->
+</div>
+
+</body>
+</html>
